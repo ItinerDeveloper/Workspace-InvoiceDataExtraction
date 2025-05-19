@@ -49,6 +49,7 @@ After deployment:
 ### 2.1 Environment Configuration (`.env`)
 
 Create or edit the `.env` file in the addon directory with the following structure:
+> 💡 For reference, see the `invoice_data_extraction_env_sample.env` file located in the GitHub repository.
 
 ```env
 AZURE_COGNITIVE_ENDPOINT=...  # Azure OCR endpoint
@@ -56,7 +57,7 @@ AZURE_API_KEY=...  # Azure OCR API key
 
 WS_URL=https://companydomain.com/workspace/api/integration/variables  # Workspace integration endpoint
 WS_API_KEY=...  # API key for Workspace authentication
-WS_HEALTHCHECK_URL=http://addonhostdnsname:8000/workspace/idrecognizer/healthcheck  # Health check URL
+WS_HEALTHCHECK_URL=http://addonhostdnsname:8000/workspace/invoicedataextractor/healthcheck  # Health check URL
 
 HMAC_SECRET=...  # HMAC secret for validating signed requests
 X-CUSTOM-APIKEY=...  # Custom API header for authentication
