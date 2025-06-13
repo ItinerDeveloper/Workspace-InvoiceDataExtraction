@@ -6,6 +6,8 @@
 ## Description
 The Invoice Data Extraction service allows an invoice document attached to a workflow to be exported from the process via a webhook. The integration service then sends the document to an MS Azure endpoint, which processes the invoice and extracts all listed business data. This data is then written back into the workflow's template variables prefixed with "invoice".
 
+> 💡 **Synchronous Operation**: This integration service operates synchronously. It receives the export event from the workflow and returns the result, including updates to all `invoice` prefixed variable, within the same session. This ensures immediate availability of the data extracted from the document.
+
 ## Dedicated Template Variables
 - **invoiceVendorName**
 - **invoiceVendorAddress**
